@@ -1,3 +1,6 @@
+"use strict";
+// activa nuevas funcionalidades, programas con mejores prácticas
+
 // VARIABLES
 
 /* var | let | const */
