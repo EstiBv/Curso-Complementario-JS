@@ -24,3 +24,5 @@ console.log(parseInt(falseNumber) + number1);
 falseNumber = "33.3";
 console.log(parseFloat(falseNumber) + number1);
 console.log(String(number1) + falseNumber);
+
+console.log(typeof booleanTrueOrFalse);
