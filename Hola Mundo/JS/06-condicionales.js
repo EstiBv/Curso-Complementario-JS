@@ -1,5 +1,5 @@
 "use strict";
-// Condicional if > estructura (básica) de control comparativo
+// Condicional if > estructura (básica) de control comparativo + operadores relacionales
 
 var age1 = 30;
 var name1 = "Mar";
@@ -14,4 +14,21 @@ if (age1 > 18 || age1 === 18) {
   }
 } else {
   console.log("Aún no puede");
+}
+
+// Operadores lógicos
+
+//And
+var year = 2018;
+if (year > 2000 && year <= 2020 && year != 2021) {
+  console.log("Actual Era");
+} else {
+  console.log("PostModerm Era");
+}
+
+//Or , si una condicion está entre paréntesis, toma mas peso ésta y se puede concatenar mas operadores
+if (year === 2008 || (year >= 2018 && year === 2028)) {
+  console.log("piensa un dicho que rime con 8");
+} else {
+  console.log("año no registrado");
 }
