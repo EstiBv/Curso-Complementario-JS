@@ -32,3 +32,5 @@ if (year === 2008 || (year >= 2018 && year === 2028)) {
 } else {
   console.log("año no registrado");
 }
+
+//Switch
