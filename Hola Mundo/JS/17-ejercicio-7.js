@@ -13,7 +13,6 @@ document.write(
 
 for (let i = 0; i <= 10; i++) {
   document.write(
-    "<li>" + number + "x" + number + " = " + number * i + "</br>" + "</li>"
+    "<li>" + i + "x" + number + " = " + number * i + "</br>" + "</li>"
   );
-  console.log(i, number * i + number);
 }
