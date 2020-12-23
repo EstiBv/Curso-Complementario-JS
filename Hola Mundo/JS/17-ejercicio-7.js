@@ -13,6 +13,16 @@ document.write(
 
 for (let i = 0; i <= 10; i++) {
   document.write(
-    "<li>" + i + "x" + number + " = " + number * i + "</br>" + "</li>"
+    "<li>" + number + "x" + i + " = " + number * i + "</br>" + "</li>"
   );
+}
+
+document.write("<h4>Todas las tablas " + "</br></h4>");
+// Todas las tablas
+
+for (let a = 0; a <= 10; a++) {
+  document.write("<h4><ul>Tabla del: " + a + "</br></ul></h4></br> ");
+  for (let i = 0; i <= 10; i++) {
+    document.write("<li>" + a + "x" + i + " = " + a * i + "</br>" + "</li>");
+  }
 }
