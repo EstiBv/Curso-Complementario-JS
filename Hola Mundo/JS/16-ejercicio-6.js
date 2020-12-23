@@ -10,7 +10,7 @@ Requisitos:
 var number = parseInt(prompt("Introduce un número", 0));
 
 while (isNaN(number)) {
-  var number = parseInt(prompt("Introduce un número", 0));
+  number;
 }
 if (number % 2 === 0) {
   alert("tu número es par: " + number);
