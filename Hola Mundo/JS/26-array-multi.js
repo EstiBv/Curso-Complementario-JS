@@ -45,3 +45,21 @@ console.log(coverText);
 // ORDENAR ARRAY
 let orderArray = films.sort();
 let reverseArray = films.reverse();
+
+// BUSQUEDAS : find tiene funcion callback
+let findFilm = films.find(function (film) {
+  return film === "La vida es Bella";
+});
+
+console.log(findFilm);
+
+// Igual pero con arrow
+let findFilm2 = films.find((film) => film === "Gran Torino");
+console.log(findFilm2);
+
+let findFilm3 = films.findIndex((film) => film === "Gran Torino");
+console.log(findFilm3);
+
+var prices = [12, 3, 24, 34, 7];
+let findPrices = prices.some((price) => price >= 30);
+console.log(findPrices);

@@ -23,9 +23,8 @@ for (const name of names) {
 }
 
 for (const name in names) {
-  let show = document.write(name + names);
+  document.write(name, names);
 }
-console.log(show);
 
 languages.forEach((element, index) => {
   document.write("<li>" + index + element + "</li>");
