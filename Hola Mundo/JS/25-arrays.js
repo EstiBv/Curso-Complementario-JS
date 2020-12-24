@@ -17,10 +17,15 @@ var languages = new Array("PHP", " JS", " Go", " Java", " C#,");
 //Mostrar array
 // document.write("Lenguajes de programación de 2018 ", languages);
 
-// //Iterar array
+// //Iterar array : for of, for in, forEach
 for (const name of names) {
   document.write(name);
 }
+
+for (const name in names) {
+  let show = document.write(name + names);
+}
+console.log(show);
 
 languages.forEach((element, index) => {
   document.write("<li>" + index + element + "</li>");
