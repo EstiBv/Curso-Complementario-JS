@@ -18,7 +18,8 @@ function add(number1, number2, addAndShow, addByTow) {
 add(
   5,
   7,
-  function (dato) {
+  // arrow : a la funcion anónima le quitamos la palabra clave y la pasamos como flecha tras los paréntesis. Con un solo parametro no hacen falta paréntesis.
+  (dato) => {
     console.log("la suma de los parametros previos es: " + dato);
   },
   function (dato) {
