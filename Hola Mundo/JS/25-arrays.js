@@ -20,12 +20,15 @@ var languages = new Array("PHP", " JS", " Go", " Java", " C#,");
 // //Iterar array : for of, for in, forEach
 for (const name of names) {
   document.write(name);
+  console.log(name); // each item
 }
 
 for (const name in names) {
   document.write(name, names);
+  console.log(name); // index item
 }
 
 languages.forEach((element, index) => {
   document.write("<li>" + index + element + "</li>");
+  console.log(index); // sencond param.
 });

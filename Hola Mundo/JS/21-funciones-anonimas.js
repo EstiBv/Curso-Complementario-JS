@@ -8,10 +8,10 @@ const film = function (name) {
 
 // Callback = una funcion que ejecuta otra funcion dentro
 
-function add(number1, number2, addAndShow, addByTow) {
+function add(number1, number2, addAndShow, addByTwo) {
   let sum = number1 + number2;
   addAndShow(sum);
-  addByTow(sum);
+  addByTwo(sum);
   return sum;
 }
 

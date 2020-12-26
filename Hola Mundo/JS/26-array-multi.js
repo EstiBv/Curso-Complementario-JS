@@ -19,7 +19,6 @@ let addYourFilmsFavourites;
 
 //eliminar el ultimo elemento
 films.pop();
-console.log(films);
 
 // eliminar el indicado por indice
 let deleteRomantic = categories.indexOf("Romantic");
