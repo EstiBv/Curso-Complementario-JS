@@ -35,3 +35,27 @@ button.addEventListener(
 button.addEventListener("mouseout", function () {
   button.style.background = "orange";
 });
+
+//FOCUS
+let inputForm = document.querySelector(".js-input");
+inputForm.addEventListener("focus", () =>
+  console.log("[focus]dento del input")
+);
+
+//BLUR
+inputForm.addEventListener("blur", () => console.log("[blur]fuera del input"));
+
+//KEYDOWN
+inputForm.addEventListener("keydown", (ev) =>
+  console.log("[keydown]pulsando tecla", String.fromCharCode(ev.keyCode))
+);
+
+//KEYPRESS
+inputForm.addEventListener("keypress", (ev) =>
+  console.log("[keypress]tecla presionada", String.fromCharCode(ev.keyCode))
+);
+
+//KEYUP
+inputForm.addEventListener("keyup", (ev) =>
+  console.log("[keyup]tecla soltada", String.fromCharCode(ev.keyCode))
+);
