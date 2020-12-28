@@ -59,3 +59,8 @@ inputForm.addEventListener("keypress", (ev) =>
 inputForm.addEventListener("keyup", (ev) =>
   console.log("[keyup]tecla soltada", String.fromCharCode(ev.keyCode))
 );
+
+// LOAD (x ej. si etiqueta script está en el headHTML y no hay nada aun cargado, )
+const loader = window.addEventListener("load", () => {
+  // aquí todas las funciones anteriores declaradas
+});
