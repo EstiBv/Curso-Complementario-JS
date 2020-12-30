@@ -12,7 +12,8 @@
   justify-content: space-evenly;
   margin: 1em 0em 1em 0em;
 }
-.sectionResults {
+.results {
+  width: 40%;
   border-color: black;
   border-style: solid;
   height: auto;

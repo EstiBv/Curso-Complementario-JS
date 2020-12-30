@@ -3,36 +3,48 @@
 const submit = document.querySelector(".form");
 // campos formulario
 const eachInput = document.querySelectorAll(".js-input");
+// secction muestra resultado datos
+const containerData = document.querySelector(".results");
+containerData.style.display = "none";
 // párrafos
 const nameP = document.querySelector(".js-resultName");
 const surnameP = document.querySelector(".js-resultSurname");
 const ageP = document.querySelector(".js-resultAge");
-// botón de mostrar
-const buttonShowResults = document.querySelector(".buttonShow");
 
+// Listener Inputs
 for (const input of eachInput) {
-  input.addEventListener("keyup", listenInputs);
+  input.addEventListener("keyup", handleInputs);
 }
 
-let inputsFilled = [];
-
-function listenInputs() {
+// Handle Inputs
+function handleInputs() {
   const name = document.querySelector("#name").value;
   const surname = document.querySelector("#surname").value;
-  const age = document.querySelector("#age").value;
-  nameP.innerHTML = name;
-  surnameP.innerHTML = surname;
-  ageP.innerHTML = age;
+  const age = parseInt(document.querySelector("#age").value);
 
-  function showDataInputs() {
-    let allData = name + surname + age;
-    inputsFilled.push(allData);
-    alert("Compruebe que sus datos están correctos: " + allData);
+  console.log(name, surname, age);
+
+  if (name.trim() === null || name.trim().length === 0) {
+    alert("El nombre introducido no es correcto");
+    return false;
   }
-  buttonShowResults.addEventListener("click", showDataInputs);
-}
 
-function submitForm(ev) {
-  ev.preventDefault();
+  if (surname.trim() === null || surname.trim().length === 0) {
+    alert("El apellido introducido no es correcto");
+    return false;
+  }
+
+  if (age === null || age <= 0 || isNaN(age)) {
+    alert("La edad introducido no es correcto");
+    return false;
+  }
+
+  // Paint data
+  submit.addEventListener("submit", () => {
+    containerData.style.display = "block";
+
+    nameP.innerHTML = name;
+    surnameP.innerHTML = surname;
+    ageP.innerHTML = age;
+  });
 }
-submit.addEventListener("submit", submitForm);

@@ -12,32 +12,42 @@
       1. Tres campos (nombre, apellidos y edad)
       2. Botón de enviar formulario (ev.submit)
       3. Mostrar datos por pantalla
-      4. Botón, con click muestra los datos actuales del formulario
+      4. Validación del formulario
      -->
     <h1>Ejercicio DOM, Eventos y Funciones - Curso JS</h1>
     <main>
-      <form action="" method="POST" class="form">
+      <form action="#" method="POST" class="form" onsubmit="return false;">
         <label for="name">Introduce tu nombre</label>
-        <input type="text" name="name" id="name" class="js-input input" />
+        <input type="text" name="name" id="name" class="js-input input1" />
 
         <label for="name">Introduce tu apellido</label>
-        <input type="text" name="surname" id="surname" class="js-input input" />
+        <input
+          type="text"
+          name="surname"
+          id="surname"
+          class="js-input input2"
+        />
 
         <label for="name">Selecciona tu edad</label>
-        <input type="number" name="age" id="age" class="js-input input" />
+        <input type="number" name="age" id="age" class="js-input input3" />
 
         <input type="submit" id="buttonSubmit" class="buttonSubmit input" />
       </form>
 
-      <div class="buttons">
-        <button class="buttonShow">Mostrar datos</button>
-      </div>
-
-      <section class="results">
-        Resultados
-        <p class="js-resultName"></p>
-        <p class="js-resultSurname"></p>
-        <p class="js-resultAge"></p>
+      <section class="js-results results">
+        <article>
+          <h1>Datos introducidos</h1>
+          <h5>Nombre:</h5>
+          <p class="js-resultName"></p>
+        </article>
+        <article>
+          <h5>Apellido:</h5>
+          <p class="js-resultSurname"></p>
+        </article>
+        <article>
+          <h5>Edad:</h5>
+          <p class="js-resultAge"></p>
+        </article>
       </section>
     </main>
     <script type="text/javascript" src="./JS/32-ejercicio-DOM.js"></script>
