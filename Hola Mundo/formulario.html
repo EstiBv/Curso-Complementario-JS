@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio DOM, Eventos y Funciones</title>
+    <link rel="stylesheet" href="./styles/styleForm.css" />
+  </head>
+  <body>
+    <!-- 
+      Formulario
+      1. Tres campos (nombre, apellidos y edad)
+      2. Botón de enviar formulario (ev.submit)
+      3. Mostrar datos por pantalla
+      4. Botón, con click muestra los datos actuales del formulario
+     -->
+    <h1>Ejercicio DOM, Eventos y Funciones - Curso JS</h1>
+    <main>
+      <form action="" method="POST" class="form">
+        <label for="name">Introduce tu nombre</label>
+        <input type="text" name="name" id="name" class="js-input input" />
+
+        <label for="name">Introduce tu apellido</label>
+        <input type="text" name="surname" id="surname" class="js-input input" />
+
+        <label for="name">Selecciona tu edad</label>
+        <input type="number" name="age" id="age" class="js-input input" />
+
+        <input type="submit" id="buttonSubmit" class="buttonSubmit input" />
+      </form>
+
+      <div class="buttons">
+        <button class="buttonShow">Mostrar datos</button>
+      </div>
+
+      <section class="results">
+        Resultados
+        <p class="js-resultName"></p>
+        <p class="js-resultSurname"></p>
+        <p class="js-resultAge"></p>
+      </section>
+    </main>
+    <script type="text/javascript" src="./JS/32-ejercicio-DOM.js"></script>
+  </body>
+</html>
