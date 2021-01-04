@@ -7,10 +7,14 @@ Crear un formulario que permita añadir peliculas
 const formFilms = document.querySelector(".js-form");
 const buttonSubmit = document.querySelector(".js-buttonSubmit");
 const inputTitleFilms = document.querySelector(".js-inputText");
-const listInnerFilms = document.querySelector(".js-filmsList");
-// const textInnerFilms = document.querySelector(".js-films");
 
-// Comprobar disponibilidad/compatibilidad del LocalStorage
+const formFilmsRemove = document.querySelector(".js-formRemove");
+const buttonRemove = document.querySelector(".js-buttonRemove");
+const inputTitleFilmsRemove = document.querySelector(".js-inputTextRemove");
+
+const listInnerFilms = document.querySelector(".js-filmsList");
+
+// Check LocalStorage Availability / Compatibility
 if (typeof Storage !== "undefined") {
   console.log("compatible LocalStorage ");
 } else {
@@ -29,20 +33,36 @@ function paintFilms() {
   }
 }
 
-// save Films
+// Save Films
 function saveFilmsLocalStorage() {
   let saveData = inputTitleFilms.value;
-  if (saveData.length >= 0) {
+  if (saveData.length >= 1) {
     localStorage.setItem(saveData, saveData);
   }
   console.log(localStorage);
   paintFilms();
 }
 
-function addFilmsButtonForm(ev) {
+// Remove favoriteFilms
+function removeFilmsLocalStorage() {
+  let deleteData = inputTitleFilmsRemove.value;
+  if (deleteData >= 1) {
+    localStorage.removeItem(deleteData);
+  }
+  paintFilms();
+}
+
+// Event
+function removeFilmsButton(ev) {
+  ev.preventDefault();
+  removeFilmsLocalStorage();
+  console.log("hola");
+}
+buttonRemove.addEventListener("click", removeFilmsButton);
+
+function addFilmsButton(ev) {
   ev.preventDefault();
   saveFilmsLocalStorage();
+  localStorage.clear();
 }
-formFilms.addEventListener("submit", addFilmsButtonForm);
-
-// paintFilms();
+formFilms.addEventListener("submit", addFilmsButton);
