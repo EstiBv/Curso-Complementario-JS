@@ -33,6 +33,18 @@ function paintFilms() {
   }
 }
 
+// Paint Films
+function paintFilmsFavorites() {
+  let createList = " ";
+  for (let film in localStorage) {
+    if (typeof localStorage[film] === "string") {
+      let listFilms = document.createElement("li");
+      createList = listFilms.append(localStorage[film]);
+      listInnerFilms.append(listFilms);
+    }
+  }
+}
+
 // Save Films
 function saveFilmsLocalStorage() {
   let saveData = inputTitleFilms.value;
@@ -47,10 +59,9 @@ function saveFilmsLocalStorage() {
 function removeFilmsLocalStorage() {
   let deleteData = inputTitleFilmsRemove.value;
   if (deleteData >= 1) {
-    localStorage.removeItem(deleteData, deleteData);
+    localStorage.removeItem(deleteData);
   }
-  paintFilms();
-  console.log("ha", deleteData);
+  paintFilmsFavorites();
 }
 
 // Event
