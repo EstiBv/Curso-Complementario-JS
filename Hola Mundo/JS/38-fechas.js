@@ -17,3 +17,4 @@ var textHour =
   `:` +
   `${minutes}`;
 console.log(textHour);
+console.log(parseInt(Math.random() * 10));
