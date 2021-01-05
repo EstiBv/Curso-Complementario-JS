@@ -87,7 +87,7 @@ Contenido del curso.
   * Timers *(10 min)*
   
 * **Sección 15 > Ejercicios Bloque III**
-
+---
 ###### `Bloque IV`
 
 * **Sección 16 > JSON - Objetos en JS - JavaScript Object Notation** 
