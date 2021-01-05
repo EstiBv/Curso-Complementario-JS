@@ -4,6 +4,7 @@
 
 const divUsers = document.querySelector(".js-users");
 const divUser = document.querySelector(".js-titles");
+const divTeacher = document.querySelector(".js-teacher");
 const spanLoading = document.querySelector(".js-loading");
 const spanLoading2 = document.querySelector(".js-loading2");
 
@@ -14,21 +15,53 @@ getUsers()
     // users = data;
     usersList(users);
 
+    return getInfoTeacher();
+  })
+
+  .then((data) => {
+    console.log(data);
+    divTeacher.innerHTML = data;
+
     return getUser();
   })
   .then((data) => data.json())
   .then((user) => {
     userSigle(user);
-    console.log(user);
+  })
+
+  .catch((error) => {
+    console.log("error");
   });
 
 function getUsers() {
   return fetch("https://jsonplaceholder.typicode.com/users");
 }
 
-const getUser = () => {
+function getUser() {
   return fetch("https://jsonplaceholder.typicode.com/users/1/posts");
-};
+}
+
+function getInfoTeacher() {
+  let teacher = {
+    name: "Perica",
+    surname: "Gómez",
+    url: "https://pericagomez.es",
+  };
+
+  return new Promise((resolve, reject) => {
+    let teacher_user = "";
+
+    setTimeout(function () {
+      teacher_user = JSON.stringify(teacher);
+      if (typeof teacher_user !== "string" || teacher_user === " ") {
+        console.log(teacher);
+        return reject("error 1");
+      } else {
+        return resolve(teacher_user);
+      }
+    }, 3000);
+  });
+}
 
 const usersList = (users) => {
   users.map((user, i) => {
