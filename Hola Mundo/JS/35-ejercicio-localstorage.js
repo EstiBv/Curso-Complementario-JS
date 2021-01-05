@@ -47,16 +47,16 @@ function saveFilmsLocalStorage() {
 function removeFilmsLocalStorage() {
   let deleteData = inputTitleFilmsRemove.value;
   if (deleteData >= 1) {
-    localStorage.removeItem(deleteData);
+    localStorage.removeItem(deleteData, deleteData);
   }
   paintFilms();
+  console.log("ha", deleteData);
 }
 
 // Event
 function removeFilmsButton(ev) {
   ev.preventDefault();
   removeFilmsLocalStorage();
-  console.log("hola");
 }
 buttonRemove.addEventListener("click", removeFilmsButton);
 
